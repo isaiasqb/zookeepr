@@ -1,0 +1,24 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "In this project, you can find a web server using the Express.js framework added to a front-end application from a fictional local zoo. The site’s data will live on a server that was specifically build for this peoject so that anyone can access it without having to download it.  The app will also be deployed to Heroku, a cloud application platform that allows you to deploy applications with servers to a webpage.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaiasqb/zookeepr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaiasqb/zookeepr/issues"
+  },
+  "homepage": "https://github.com/isaiasqb/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
