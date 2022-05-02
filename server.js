@@ -13,6 +13,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true}));
 //parse incoming JASON data
 app.use(express.json());
+// middleware that instructs the server to make certain files readily available 
+app.use(express.static('public'));
 
   //function for filter functionality
 function filterByQuery(query, animalsArray) {
