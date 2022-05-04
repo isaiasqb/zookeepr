@@ -9,7 +9,7 @@ const handleAnimalFormSubmit = event => {
   const dietRadioHTML = $animalForm.querySelectorAll('[name="diet"]');
   let diet;
 
-  for (let i = 0; i < dietRadioHTML.length; i += 1) {
+  for (let i = 0; i < dietRadioHTML.length; i += 1) { //select each diet option by the index number
     if (dietRadioHTML[i].checked) {
       diet = dietRadioHTML[i].value;
     }
@@ -26,6 +26,26 @@ const handleAnimalFormSubmit = event => {
   }
   const animalObject = { name, species, diet, personalityTraits };
 
+// posting a new animal
+  fetch('/api/animals', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(animalObject)
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    alert('error: '+ response.statusText);
+  })
+  .then (postResponse => {
+    console.log(postResponse);
+    alert('thank you for adding an animal')
+  });
 };
 
 $animalForm.addEventListener('submit', handleAnimalFormSubmit);
+

@@ -30,7 +30,6 @@ const getAnimals = (formData = {}) => {
   });
 
   console.log(queryUrl);
-
 };
 
 const handleGetAnimalsSubmit = event => {

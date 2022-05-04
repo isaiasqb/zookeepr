@@ -117,6 +117,17 @@
         "talkative"
       ],
       "id": "11"
+    },
+    {
+      "name": "Lorraine",
+      "species": "Snake",
+      "diet": "piscivore",
+      "personalityTraits": [
+        "hungry",
+        "anxious",
+        "goofy"
+      ],
+      "id": "12"
     }
   ]
 }
