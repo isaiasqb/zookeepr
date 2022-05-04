@@ -30,6 +30,19 @@ const getAnimals = (formData = {}) => {
   });
 
   console.log(queryUrl);
+
+  //making the request to get the data 
+  fetch(queryUrl)
+  .then(response => {
+    if (!response.ok) {
+      return alert('Error: ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(animalData => {
+    console.log(animalData);
+    printResults(animalData); //function declared above where it generates a card for ecach animal
+  });
 };
 
 const handleGetAnimalsSubmit = event => {
@@ -47,6 +60,7 @@ const handleGetAnimalsSubmit = event => {
     diet = '';
   }
 
+  // gets the information submited in the personality traits and sends it to getAnimals function
   const personalityTraitArr = [];
   const selectedTraits = $animalForm.querySelector('[name="personality"').selectedOptions;
 
